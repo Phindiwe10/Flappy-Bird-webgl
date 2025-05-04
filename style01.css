@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background: 70c5ce;
+    display: flex;
+    
+}
+canvas {
+border: 2px solid #000;
+background: #70c5ce;
+display: block;  
+/*/max-width: 100%;
+max-height: 100%;*/
+}
+.ui-container {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+.ui-button {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+.ui-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+.ui-button:active {
+    transform: translateY(0);
+}
+#gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  #gameOverScreen.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #restartBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #countdown {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  #readyButton {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    padding: 0.5em 1em;
+    z-index: 3;
+  }
+  
+  #readyButton.hidden {
+    display: none;
+  }
+  #helpButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  #helpPanel {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    z-index: 10;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px black;
+  }
+  
+  #helpPanel h2 {
+    margin-top: 0;
+    color: #ffd700;
+    text-align: center;
+  }
+  
+  #helpPanel button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  #bgColorLabel,
+#bgColorPicker {
+  position: absolute;
+  top: 80px; 
+  left: 20px;
+  z-index: 20;
+  color: white;
+  font-weight: bold;
+}
+
+#bgColorPicker {
+  margin-top: 20px;
+}
+#pipeColorLabel,
+#pipeColorPicker {
+  position: absolute;
+  top: 130px; 
+  left: 20px;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+}
+
+#pipeColorPicker {
+  margin-top: 20px;
+}
+
+    
